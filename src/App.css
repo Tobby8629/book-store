@@ -56,7 +56,7 @@ nav ul {
   top: 0;
   width: 100%;
   background-color: rgba(44, 148, 227, 0.807);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
   padding: 2rem;
   text-align: center;
   transition: 0.2s linear;
