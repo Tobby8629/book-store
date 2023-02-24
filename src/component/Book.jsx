@@ -1,8 +1,6 @@
 import './book.css';
 import Bookeach from './Bookeach';
 
-
-
 function Book() {
   const book = [{ title: 'Things fall apart', author: 'chinua achebe', id: 1 },
     { title: 'Things fall apart', author: 'chinua achebe', id: 4 },
@@ -16,7 +14,5 @@ function Book() {
     </div>
   );
 }
-
-
 
 export default Book;
