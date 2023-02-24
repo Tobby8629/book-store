@@ -1,0 +1,80 @@
+
+.books {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  border: 0.1px solid rgba(104, 104, 104, 0.382);
+  border-radius: 5px;
+}
+
+.book h4 {
+  margin-bottom: 5px;
+  color: gray;
+}
+
+.book p,
+.btns button {
+  color: rgb(129, 123, 249);
+  font-weight: 100;
+}
+
+.btns {
+  margin-top: 1.5rem;
+}
+
+.btns button {
+  border: none;
+  outline: none;
+  margin-right: 5px;
+  padding: 3px 5px;
+  background-color: transparent;
+  font-size: 17px;
+  border-right: 1px solid rgb(172, 170, 170);
+}
+
+.btns button:last-child {
+  border: none;
+}
+
+/** form **/
+.all form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.all form input {
+  padding: 10px;
+  margin: 0;
+  height: 100%;
+  border-radius: 10px;
+  font-size: 20px;
+  outline: none;
+  border: 0.1px solid rgba(104, 104, 104, 0.382);
+}
+
+.addh2 {
+  color: rgb(146, 146, 146);
+}
+
+#book {
+  width: 50%;
+}
+
+#author {
+  width: 30%;
+}
+
+.add {
+  width: 15%;
+  background-color: blue;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+}
