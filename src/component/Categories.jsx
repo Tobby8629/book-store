@@ -1,9 +1,21 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { checkstatus } from '../redux/categories/categoriesSlice';
 
 function Categories() {
+  const cate = useSelector((state) => state.Categories.categories);
+  const dispatch = useDispatch();
+  const handlecheck = () => {
+    dispatch(checkstatus());
+  };
+
   return (
     <div className="all cate">
-      <button className="cat" type="button"> check status </button>
+      <p>{cate}</p>
+      <div className="cat">
+        <button type="button" onClick={handlecheck}> check status </button>
+      </div>
+
     </div>
   );
 }

@@ -1,9 +1,20 @@
 import React from 'react';
-import { propTypes } from 'prop-types';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { categoryBook, removeBook } from '../redux/books/Bookslice';
 
-function Bookeach({ title, author, id }) {
+function Bookeach({
+  title, author, id, category,
+}) {
+  const dispatch = useDispatch();
+  const handledelete = (num) => {
+    dispatch(removeBook({ id: num }));
+  };
+  const handlefilter = (cat) => {
+    dispatch(categoryBook({ catego: cat }));
+  };
   return (
-    <div className="books" key={id}>
+    <div className="books">
       <div className="book">
         <h4>book genre</h4>
         <h3>{title}</h3>
@@ -12,17 +23,18 @@ function Bookeach({ title, author, id }) {
 
       <div className="btns">
         <button type="submit">comments</button>
-        <button type="submit">remove</button>
-        <button type="submit">Edit</button>
+        <button type="submit" onClick={() => { handledelete(id); }}>remove</button>
+        <button type="submit" onClick={() => { handlefilter(category); }}> filter catergory </button>
       </div>
     </div>
   );
 }
 
 Bookeach.propTypes = {
-  title: propTypes.string.isRequired,
-  author: propTypes.string.isRequired,
-  id: propTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Bookeach;
