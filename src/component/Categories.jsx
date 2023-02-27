@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { checkstatus } from '../redux/feature/categories/categoriesSlice';
+import { checkstatus } from '../redux/categories/categoriesSlice';
 
 function Categories() {
   const cate = useSelector((state) => state.Categories.categories);

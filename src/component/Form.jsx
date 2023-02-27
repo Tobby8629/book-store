@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/feature/books/Bookslice';
+import { addBook } from '../redux/books/Bookslice';
 
 function Form() {
   const [tate, settate] = useState({ title: '', author: '', item_id: '' });
