@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { categoryBook, removeBook } from '../redux/books/Bookslice';
+import { categoryBook, deleteapi } from '../redux/books/Bookslice';
 
 function Bookeach({
   title, author, id, category,
 }) {
   const dispatch = useDispatch();
   const handledelete = (num) => {
-    dispatch(removeBook({ id: num }));
+    dispatch(deleteapi({ id: num }));
   };
   const handlefilter = (cat) => {
     dispatch(categoryBook({ catego: cat }));
   };
+
   return (
     <div className="books">
       <div className="book">
