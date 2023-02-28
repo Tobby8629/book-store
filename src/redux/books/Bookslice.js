@@ -44,17 +44,6 @@ const initialState = {
 const Bookslice = createSlice({
   name: 'book',
   initialState,
-  // reducers: {
-  //   addBook: (state, action) => {
-  //     state.books.push(action.payload);
-  //   },
-  //   removeBook: (state, action) => (
-  //     { books: state.books.filter((book) => book.item_id !== action.payload.id) }
-  //   ),
-  //   categoryBook: (state, action) => ({
-  //     books: state.books.filter((book) => book.category === action.payload.catego),
-  //   }),
-  // },
   extraReducers: (builder) => {
     builder.addCase(bookapi.fulfilled, (state, action) => {
       const fresh = Object.entries(action.payload);
