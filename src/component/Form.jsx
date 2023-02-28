@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/Bookslice';
+import { addbookapi } from '../redux/books/Bookslice';
 
 function Form() {
   const [tate, settate] = useState({ title: '', author: '', item_id: '' });
   const dispatch = useDispatch();
+
   const handleadd = (e) => {
     e.preventDefault();
     if (tate.title === '' || tate.author === '') {
       return;
     }
-    dispatch(addBook(tate));
+    dispatch(addbookapi({ id: tate.item_id, author: tate.author, title: tate.title }));
     settate({
       title: '',
       author: '',
