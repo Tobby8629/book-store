@@ -90,7 +90,7 @@ nav li {
 }
 
 .all {
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
   padding: 2.5rem 0;
   border-bottom: 2px solid rgb(123, 123, 123);
@@ -180,5 +180,9 @@ nav li {
 
   .menubar {
     display: none;
+  }
+
+  .all {
+    width: 90%;
   }
 }

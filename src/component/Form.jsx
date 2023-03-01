@@ -23,7 +23,7 @@ function Form() {
       <form onSubmit={handleadd}>
         <input type="text" placeholder="Book title" id="book" value={tate.title} onChange={(e) => settate({ ...tate, title: e.target.value })} />
         <input type="text" placeholder="author" id="author" value={tate.author} onChange={(e) => settate({ ...tate, author: e.target.value, item_id: `item${Math.floor(Math.random() * 1000)}` })} />
-        <button className="add" type="submit">ADD BOOK</button>
+        <button className="add addbook" type="submit">ADD BOOK</button>
       </form>
     </div>
 
