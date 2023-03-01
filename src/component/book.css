@@ -14,21 +14,25 @@
   color: gray;
 }
 
+.book h3 {
+  text-transform: capitalize;
+}
+
 .book p,
 .btns button {
-  color: rgb(129, 123, 249);
-  font-weight: 100;
+  color: rgb(62, 91, 255);
+  font-weight: 300;
 }
 
 .btns {
-  margin-top: 1.5rem;
+  margin: 0.5rem 0;
 }
 
 .btns button {
   border: none;
   outline: none;
   margin-right: 5px;
-  padding: 3px 5px;
+  padding: 0 5px;
   background-color: transparent;
   font-size: 17px;
   border-right: 1px solid rgb(172, 170, 170);
@@ -41,14 +45,14 @@
 /** form **/
 .all form {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .all form input {
   padding: 10px;
-  margin: 0;
+  margin: 5px 0;
   height: 100%;
   border-radius: 10px;
   font-size: 20px;
@@ -56,25 +60,123 @@
   border: 0.1px solid rgba(104, 104, 104, 0.382);
 }
 
-.addh2 {
+.add {
+  width: 170px;
+  background-color: rgb(0, 94, 255);
+  padding: 8px 0;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 100;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.837);
+  text-transform: uppercase;
+}
+
+.num {
+  display: flex;
+  margin: 5px 0;
+}
+
+.num p {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.current-chap h2 {
+  font-size: 16px;
+  margin: 2px 0;
+  font-weight: 300;
   color: rgb(146, 146, 146);
 }
 
-#book {
-  width: 50%;
-}
-
-#author {
-  width: 30%;
-}
-
-.add {
-  width: 15%;
-  background-color: blue;
-  padding: 10px;
+.current-chap p {
   font-size: 17px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  color: white;
+}
+
+.circle {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .books {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left-book {
+    width: 50%;
+  }
+
+  .btns {
+    display: flex;
+    margin-top: 1.5rem;
+  }
+
+  .all form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .addh2 {
+    color: rgb(146, 146, 146);
+  }
+
+  #book {
+    width: 50%;
+  }
+
+  #author {
+    width: 20%;
+  }
+
+  .addbook {
+    width: 25%;
+    padding: 10px;
+  }
+
+  /** right book **/
+
+  .right-book {
+    display: flex;
+    align-items: center;
+  }
+
+  .circle-num {
+    display: flex;
+    align-items: center;
+    border-right: 2px solid gray;
+    padding: 1rem 1.5rem;
+  }
+
+  .circle {
+    display: block;
+    height: 60px;
+    width: 60px;
+  }
+
+  .num {
+    flex-direction: column;
+  }
+
+  .num p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .current-chap p {
+    margin-bottom: 15px;
+  }
+
+  .num p:last-child {
+    color: rgb(146, 146, 146);
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .current-chap {
+    padding: 1rem 2rem;
+  }
 }

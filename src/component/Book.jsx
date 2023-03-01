@@ -12,13 +12,14 @@ function Book() {
   }, [dispatch]);
   return (
     <div className="all">
-      {book.map((book) => (
+      {book.map((book, index) => (
         <Bookeach
           key={book.id}
           title={book.title}
           author={book.author}
           id={book.id}
           category={book.category}
+          index={index}
         />
       ))}
     </div>
